@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "site of MomsHeart-Counseling-Center client&frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ripetangerine/MomsHeart-Counseling-Center.git"
+  },
+  "author": "ripetangerine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ripetangerine/MomsHeart-Counseling-Center/issues"
+  },
+  "homepage": "https://github.com/ripetangerine/MomsHeart-Counseling-Center#readme"
+}
