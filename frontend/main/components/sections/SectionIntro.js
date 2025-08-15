@@ -1,7 +1,7 @@
 export default function SectionIntro(){
     return(
-        <div className="section">
-            <h1>Intro page</h1>
-        </div>
+        <section id="intro" className="section" style={{ background: "#f7f7f7" }}>
+            <h2>INTRO</h2>
+        </section>    
     );
 }

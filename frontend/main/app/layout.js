@@ -1,18 +1,18 @@
-// app/page.js
+import "./globals.css";
+import MainNav from "@/components/nav/MainNav";
 
-export function HomePage() {
-  return (
-    <main
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>
-        🚧 테스트 중입니다 🚧
-      </h1>
-    </main>
-  )
+export const metadata = {
+  title: "",
+  description: "원페이지 스크롤 테스트중"
+}
+
+export default function RootLayout({child}){
+  return(
+    <html lang="ko">
+      <body>
+        <MainNav/>
+        {child}
+      </body>
+    </html>
+  );
 }

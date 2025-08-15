@@ -1,1 +1,14 @@
-/**모든 루트 공통 페이지 */
+"use client";
+import { SectionMap } from "@/components/sections";
+import { sectionsConfig } from "@/config/sections";
+
+export default function Page(){
+    return(
+        <>
+            {sectionsConfig.map(({key, id})=>{
+                const Section = SectionMap[key];
+                return <Section key={id}/>;
+            })}
+        </>
+    )
+}

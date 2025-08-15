@@ -1,8 +1,8 @@
 export default function SectionAbout() {
     return (
-      <div className="section">
-        <h2>ABOUT PAGE</h2>
-      </div>
+      <section id="about" className="section" style={{ background: "#f7f7f7" }}>
+        <h2>About</h2>
+      </section>
     );
-  }
+}
   

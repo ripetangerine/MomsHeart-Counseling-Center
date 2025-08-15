@@ -1,14 +1,24 @@
-@import "fullpage.js/dist/fullpage.css";
+/* 리셋/기본 */
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+html { scroll-behavior: smooth; } /* 앵커 이동 부드럽게 */
 
-html, body { margin: 0; }
+/* 스냅 스크롤 */
+body {
+  scroll-snap-type: y mandatory;  /* 한 섹션씩 스냅 */
+  overflow-y: scroll;
+}
+
+/* 공용 섹션 베이스 */
 .section {
+  min-height: 100vh;              /* 화면 하나 꽉 채움 */
+  scroll-snap-align: start;       /* 섹션 시작 지점에 스냅 */
   display: grid;
   place-items: center;
-  min-height: 100vh;
   padding: 40px;
 }
 
-/* 헤더(네비) */
+/* Nav */
 .nav {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: blur(8px);
