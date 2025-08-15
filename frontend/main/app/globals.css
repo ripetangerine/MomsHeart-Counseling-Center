@@ -11,41 +11,17 @@ body {
   overscroll-behavior: contain;            /* 모바일 튕김 최소화(선택) */
 }
 
-/* ===== Fixed Nav (항상 보임) ===== */
-.nav {
-  position: fixed;                          /* ← 핵심: 스크롤해도 항상 상단 */
-  top: 0; left: 0; right: 0;
-  height: var(--nav-h);
-  z-index: 1000;
-  display: flex; align-items: center;       /* 수직 정렬 안정화 */
-  backdrop-filter: blur(8px);
-  background: rgba(255,255,255,.6);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-  padding: 0 16px;                          /* 내부 좌우 여백 */
-}
+
 
 /* 메뉴 */
 .menu { display: flex; gap: 16px; padding: 12px 20px; margin: 0; list-style: none; }
 .menu a { text-decoration: none; color: #111; font-weight: 500; }
 .menu li.active a { text-decoration: underline; font-weight: 700; }
 
-/* ===== Sections ===== */
-.section {
-  /* 네비 높이만큼 보정해서 '한 화면' 차지 */
-  min-height: calc(100svh - var(--nav-h));  /* svh: 모바일 주소창 대응 */
-  scroll-snap-align: start;
-  display: grid;
-  place-items: center;
-  padding: 40px;
 
-  /* 앵커 점프 시 네비에 가려지지 않게 오프셋 */
-  scroll-margin-top: var(--nav-h);
-  /* 내용이 네비 뒤로 숨지지 않게 상단 패딩 추가(원하면 제거 가능) */
-  padding-top: calc(40px + var(--nav-h));
-}
 
 /* ===== (선택) sticky로 쓰고 싶으면 이 블록으로 바꿔라 ===== */
-/*
+
 .nav {
   position: sticky;
   top: 0;
@@ -64,4 +40,4 @@ body {
   padding: 40px;
   scroll-margin-top: var(--nav-h);
 }
-*/
+
