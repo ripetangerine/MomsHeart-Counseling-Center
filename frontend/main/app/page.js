@@ -1,15 +1,15 @@
-"use client";
-import { SectionMap } from "@/components/sections";
-import { sectionsConfig } from "@/config/sections";
+'use client'
+import { SectionMap } from '@/components/sections'
+import { sectionsConfig } from '@/config/sections'
 
-export default function Page(){
-    return(
-        <>
-            {sectionsConfig.map(({key, id})=>{
-                const Section = SectionMap[key];
-                if(!Section) return null;
-                return <Section key={id}/>;
-            })}
-        </>
-    )
+export default function Page() {
+  return (
+    <>
+      {sectionsConfig.map(({ key, anchor }) => {
+        const Section = SectionMap[key]
+        if (!Section) return null
+        return Section ? <Section id={anchor} key={anchor} /> : null
+      })}
+    </>
+  )
 }

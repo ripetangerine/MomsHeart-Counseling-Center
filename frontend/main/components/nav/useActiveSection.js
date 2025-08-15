@@ -1,31 +1,32 @@
-"use client";
-import { useEffect, useState } from "react";
+'use client'
+import { useEffect, useState } from 'react'
 
-export default function useActiveSection(ids = []) {
-  const [active, setActive] = useState(ids[0] || null);
+export default function useActiveSection(anchors = []) {
+  const [active, setActive] = useState(anchors[0] || null)
 
   useEffect(() => {
-    const sections = ids
-      .map(id => document.getElementById(id))
-      .filter(Boolean);
+    const targets = anchors
+      .map((a) => document.getElementById(a))
+      .filter(Boolean)
 
-    const observer = new IntersectionObserver(
+    if (!targets.length) return
+
+    const io = new IntersectionObserver(
       (entries) => {
         // 가장 화면에 많이 보이는 섹션을 active로 설정
-        const visible = entries
-          .filter(e => e.isIntersecting)
-          .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible?.target?.id) setActive(visible.target.id);
+        const top = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+        if (top?.target?.id) setActive(top.target.id)
       },
       {
-        root: null,
-        threshold: [0.5, 0.75, 0.98], // 절반 이상 보이면 활성화
+        threshold: [0.5, 0.75, 0.98],
       }
-    );
+    )
 
-    sections.forEach(sec => observer.observe(sec));
-    return () => observer.disconnect();
-  }, [ids.join(",")]);
+    targets.forEach((el) => io.observe(el))
+    return () => io.disconnect()
+  }, [anchors.join(',')])
 
-  return active;
+  return active
 }
