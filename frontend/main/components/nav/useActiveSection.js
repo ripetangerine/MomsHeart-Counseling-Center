@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 
 export default function useActiveSection(anchors = []) {
-  const [active, setActive] = useState(anchors[0] || null)
+  const [active, setActive] = useState(null)
 
   useEffect(() => {
     const targets = anchors
@@ -17,7 +17,12 @@ export default function useActiveSection(anchors = []) {
         const top = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
-        if (top?.target?.id) setActive(top.target.id)
+
+        if (top?.target?.id) {
+          setActive(top[0].target.id)
+        } else {
+          setActive(null)
+        }
       },
       {
         threshold: [0.5, 0.75, 0.98],
