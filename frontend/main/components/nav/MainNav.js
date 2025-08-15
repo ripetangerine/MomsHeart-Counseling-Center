@@ -1,13 +1,18 @@
 "use client";
-import { sectionsConfig } from "@/config/sections";
+import { sectionsConfig, navItems } from "@/config/sections";
+import useActiveSection from "./useActiveSection";
 
 
 export default function MainNav(){
+    const ids = navItems.map(s=>s.id);
+    const active = useActiveSection(ids);
+
+
     return(
         <nav className="nav">
             <ul className="menu">
                 {sectionsConfig.map(({anchor, label}) => (
-                    <li key={anchor} data-manuanchor={anchor}>
+                    <li key={anchor} className={active===anchor? "active":""}>
                         <a href={`#${anchor}`}>{label}</a>
                     </li>
                 ))}
