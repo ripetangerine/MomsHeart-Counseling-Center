@@ -1,15 +1,12 @@
-/* 리셋/기본 */
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }
 html { scroll-behavior: smooth; } /* 앵커 이동 부드럽게 */
 
-/* 스냅 스크롤 */
 body {
   scroll-snap-type: y mandatory;  /* 한 섹션씩 스냅 */
   overflow-y: scroll;
 }
 
-/* 공용 섹션 베이스 */
 .section {
   min-height: 100vh;              /* 화면 하나 꽉 채움 */
   scroll-snap-align: start;       /* 섹션 시작 지점에 스냅 */
@@ -18,13 +15,16 @@ body {
   padding: 40px;
 }
 
-/* Nav */
 .nav {
-  position: sticky; top: 0; z-index: 50;
+  position: sticky; 
+  top: 0; 
+  z-index: 50;
   backdrop-filter: blur(8px);
   background: rgba(255,255,255,.6);
   border-bottom: 1px solid rgba(0,0,0,.06);
+    padding: 10px 16px;
 }
+
 .menu { display: flex; gap: 16px; padding: 12px 20px; margin: 0; list-style: none; }
 .menu a { text-decoration: none; color: #111; font-weight: 500; }
 .menu li.active a { text-decoration: underline; font-weight: 700; }

@@ -1,4 +1,3 @@
-import { sectionsConfig } from "@/config/sections";
 
 export default function SectionHero(){
     const styles = require("./SectionHero.module.css");

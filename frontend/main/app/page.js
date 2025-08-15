@@ -7,6 +7,7 @@ export default function Page(){
         <>
             {sectionsConfig.map(({key, id})=>{
                 const Section = SectionMap[key];
+                if(!Section) return null;
                 return <Section key={id}/>;
             })}
         </>
