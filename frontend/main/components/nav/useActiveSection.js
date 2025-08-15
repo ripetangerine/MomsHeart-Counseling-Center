@@ -18,8 +18,8 @@ export default function useActiveSection(anchors = []) {
           .filter((e) => e.isIntersecting)
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
 
-        if (top?.target?.id) {
-          setActive(top[0].target.id)
+        if (top?.targets?.id) {
+          setActive(top[0].targets.id)
         } else {
           setActive(null)
         }
