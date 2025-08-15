@@ -1,0 +1,20 @@
+@import "fullpage.js/dist/fullpage.css";
+
+html, body { margin: 0; }
+.section {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* 헤더(네비) */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,.6);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.menu { display: flex; gap: 16px; padding: 12px 20px; margin: 0; list-style: none; }
+.menu a { text-decoration: none; color: #111; font-weight: 500; }
+.menu li.active a { text-decoration: underline; font-weight: 700; }
