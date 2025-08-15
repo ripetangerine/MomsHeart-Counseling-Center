@@ -6,8 +6,8 @@
     font-size: clamp(32px, 6vw, 72px); 
     margin: 0 0 12px; 
 }
-/* .subtitle { 
+.subtitle { 
     opacity: .85; 
     max-width: 720px; 
     text-align: center; 
-} */
+}
