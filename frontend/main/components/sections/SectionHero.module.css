@@ -1,13 +1,104 @@
-.wrap { 
-    background: #111; 
-    color: #fff; 
+/* === 그대로 유지 === */
+.hero {
+  min-height: 100svh;
+  padding: 0;
+  position: relative;
+  isolation: isolate;
 }
-.title {
-    font-size: clamp(32px, 6vw, 72px); 
-    margin: 0 0 12px; 
+.stage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
-.subtitle { 
-    opacity: .85; 
-    max-width: 720px; 
-    text-align: center; 
+.slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transform: none;
+  transition: opacity 0.6s ease;
+}
+.slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18),
+    rgba(0, 0, 0, 0.28)
+  );
+  pointer-events: none;
+}
+.slide.active {
+  opacity: 1;
+}
+
+/* 화면 가득 채우기 (애니메이션 제거) */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* transform: scale(1.05);  ← 삭제 */
+}
+/* .slide.active .image { animation: kenburns var(--dur, 5000ms) ease-out forwards; }  ← 삭제 */
+/* @keyframes kenburns { ... } ← 통째로 삭제 */
+
+/* 캡션은 필요하면 유지 */
+.caption {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  text-align: center;
+  opacity: 1; /* 항상 보이게 하려면 1, 활성시에만 보이게 하려면 0으로 두고 .active에서 1로 */
+}
+
+/* 진행바 유지(필요 없으면 이 블록 삭제) */
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.progress::after {
+  content: '';
+  position: absolute;
+  inset: 0 100% 0 0;
+  background: #fff;
+  animation: fill var(--dur, 5000ms) linear forwards;
+}
+@keyframes fill {
+  from {
+    inset: 0 100% 0 0;
+  }
+  to {
+    inset: 0 0 0 0;
+  }
+}
+
+/* 도트: 표시 전용(클릭/드래그 불가) */
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: max(16px, env(safe-area-inset-bottom));
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+  pointer-events: none; /* 사용자 조작 막기 */
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+}
+.dotActive {
+  background: #fff;
 }
