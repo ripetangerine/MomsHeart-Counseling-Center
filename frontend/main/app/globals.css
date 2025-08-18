@@ -46,7 +46,7 @@ body {
   padding: 0 16px;
 }
 .section {
-  min-height: 100svh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: grid;
   place-items: center;

@@ -1,6 +1,7 @@
 /* === 그대로 유지 === */
 .hero {
-  min-height: 100svh;
+  /* min-height: calc(100svh - var(--nav-height)); */
+  min-height: 100vh;
   padding: 0;
   position: relative;
   isolation: isolate;

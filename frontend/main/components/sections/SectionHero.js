@@ -27,7 +27,7 @@ export default function SectionHero({
   return (
     <section
       id={id}
-      className={`section ${styles.hero}`}
+      className={`section hero ${styles.hero}`}
       aria-roledescription="carousel"
       aria-live="polite"
     >
