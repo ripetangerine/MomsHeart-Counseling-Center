@@ -16,6 +16,7 @@ body {
   overflow-y: auto;
   scroll-snap-type: y mandatory; /* 한 섹션씩 스냅 */
   overscroll-behavior: contain; /* 모바일 튕김 최소화(선택) */
+  font-family: 'NanumSquareNeo', sans-serif;
 }
 
 .menu {
