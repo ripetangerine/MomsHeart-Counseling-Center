@@ -1,0 +1,77 @@
+:root {
+  --nav-h: 60px;
+} /* 네비 높이 */
+
+.nav {
+  position: fixed; /* sticky여도 동일, 핵심은 flex + height */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  z-index: 1000;
+
+  display: flex; /* ✅ nav 자체를 flex 컨테이너로 */
+  align-items: center; /* ✅ nav 높이 안에서 수직 가운데 정렬 */
+  /* padding은 nav_inner 쪽에만 두는 걸 권장 */
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* nav_inner는 가로 정렬과 최대폭만 담당 */
+.nav_inner {
+  display: flex;
+  align-items: center; /* 자식(로고/메뉴/CTA) 수직 중앙 */
+  justify-content: space-between; /* 좌우 배치 */
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* 좌우 여백 */
+  height: 100%; /* nav 높이 채워서 정렬 안정화 */
+}
+
+/* 로고: 이미지가 nav 높이를 넘지 않게 */
+.nav_logo img {
+  display: block;
+  height: calc(var(--nav-h) - 16px); /* 위아래 8px 여유 */
+  width: auto;
+}
+
+/* 메뉴 */
+.menu {
+  display: flex;
+  align-items: center; /* ✅ 텍스트 baseline 치우침 방지 */
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: inline-flex; /* 아이콘/텍스트 함께 중앙 정렬 */
+  align-items: center;
+  line-height: 1; /* 텍스트 줄간 간섭 방지 */
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.menu li.active a {
+  border-bottom: 3px solid #e5c66b;
+  padding-bottom: 6px;
+  text-decoration: none;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  align-items: center;
+}
+.book_btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}

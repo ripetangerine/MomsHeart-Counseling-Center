@@ -18,7 +18,7 @@ export default function useActiveSection(anchors = []) {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0] // 보이는 면적 비율(0-1)
 
         if (top?.target?.id) { //top == entries entries.target에서 id를 읽음
-          setActive(top.targets.id)  
+          setActive(top.target.id)  
         } else {
           setActive(null)
         }
