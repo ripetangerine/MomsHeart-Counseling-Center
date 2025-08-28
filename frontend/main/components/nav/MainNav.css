@@ -2,6 +2,10 @@
   --nav-h: 60px;
 } /* 네비 높이 */
 
+* {
+  font-weight: 500;
+}
+
 .nav {
   position: fixed; /* sticky여도 동일, 핵심은 flex + height */
   top: 0;
@@ -55,7 +59,6 @@
   line-height: 1; /* 텍스트 줄간 간섭 방지 */
   text-decoration: none;
   color: #111;
-  font-weight: 500;
 }
 
 .menu li.active a {
@@ -74,4 +77,5 @@
   border: none;
   border-radius: 999px;
   cursor: pointer;
+  background-color: #ffefb9;
 }
