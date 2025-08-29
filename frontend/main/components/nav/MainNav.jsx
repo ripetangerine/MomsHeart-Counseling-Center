@@ -2,6 +2,7 @@
 import { navItems } from '@/config/sections.jsx' // nav 표기 section
 import useActiveSection from './useActiveSection.jsx'
 import '@/components/nav/MainNav.css'
+import Link from 'next/link'
 
 export default function MainNav() {
   const anchors = navItems.map((s) => s.anchor) //배열의 anchor 속성 뽑기
@@ -12,14 +13,14 @@ export default function MainNav() {
       <nav className="nav">
         <div className="nav_inner">
           {/* 로고 */}
-          <a href={`#${'hero'}`}>
+          <Link href={`${'hero'}`}>
             <img src="/nav/main_logo.png" alt="상담센터로고/hero" />
-          </a>
+          </Link>
           {/* 메뉴 */}
           <div className="menu">
             {navItems.map(({ anchor, label }) => (
               <li key={anchor} className={active === anchor ? 'active' : ''}>
-                <a href={`#${anchor}`}>{label}</a>
+                <Link href={`${anchor}`}>{label}</Link>
               </li>
             ))}
           </div>

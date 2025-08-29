@@ -2,17 +2,13 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
 import styles from './SectionHero.module.css'
 
-// 예시 이미지 (public/hero/* 에 넣어둬)
+// DB
 const DEFAULT_IMAGES = ['/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg']
 
 export default function SectionHero({
   id = 'hero',
   images = DEFAULT_IMAGES,
   intervalMs = 5000,
-  ////// db
-  titleImgDir = '/nav/main_logo.png',
-  content1,
-  content2,
 }) {
   const [idx, setIdx] = useState(0)
   const timerRef = useRef(null)
@@ -20,8 +16,8 @@ export default function SectionHero({
   // 진행바 애니메이션 리셋용 키
   const progressKey = useMemo(() => `${idx}-${intervalMs}`, [idx, intervalMs])
 
+  if (timerRef.current) clearInterval(timerRef.current)
   useEffect(() => {
-    if (timerRef.current) clearInterval(timerRef.current)
     timerRef.current = setInterval(() => {
       setIdx((p) => (p + 1) % images.length)
     }, intervalMs)
@@ -44,9 +40,9 @@ export default function SectionHero({
             className={`${styles.slide} ${i === idx ? styles.active : ''}`}
             aria-hidden={i !== idx}
           >
-            <img src={src} alt="" className={styles.image} />
+            <img src={src} alt="" className={`${styles.image} ${styles.veil}`} />
             <figcaption className={styles.caption}>
-              {/* 필요하면 여기 캡션/CTA 넣어 */}
+              <ImageAttach />
             </figcaption>
           </figure>
         ))}
@@ -54,7 +50,7 @@ export default function SectionHero({
 
       {/* 상단 진행바: 슬라이드마다 5초 채워지고 전환 시 리셋 */}
       <div
-        className={styles.progress}
+        className={`${styles.progress} ${styles.veil}`}
         key={progressKey}
         style={{ ['--dur']: `${intervalMs}ms` }}
       />
@@ -68,31 +64,23 @@ export default function SectionHero({
           />
         ))}
       </div>
-      {/* <div className="caption">
-        <ImageAttach
-          titleImgDir={titleImgDir}
-          content1={content1}
-          content2={content2}
-        />
-      </div> */}
     </section>
   )
 }
 
 function ImageAttach() {
-  const titleImgDir = '/nav/main_logo.png'
-  const content1 =
-    '누군가의 <span className="orange">\'마음\'</span>을 가장 깊이 이해하고 싶다는 뜻에서 시작되었습니다.'
-  const content2 =
-    '<span className="blue">전문성</span>과 <span className="orange">따뜻함</span>으로 당신의 이야기에 귀를 기울이겠습니다.'
-
+  const Dir = '/nav/hero.png'
   return (
-    <div>
-      <img src={titleImgDir} alt="상담센터 사진" />
-      <div className="overlay">
-        <img src={titleImgDir} alt="상담센터 사진" className="titleLogo" />
-        <p dangerouslySetInnerHTML={{ __html: content1 }} />
-        <p dangerouslySetInnerHTML={{ __html: content2 }} />
+    <div className={styles.overlay}>
+      <img className={styles.overlay_logo} src={Dir} alt="상담센터 사진" />
+      <div className={styles.overlay_text}>
+        {/* 원래 DB 처리 */}
+        <div>
+          누군가의 <span className={styles.overlay_pink}>'마음'</span>을 가장 깊이 이해하고 싶다는 뜻에서 시작되었습니다
+        </div>
+        <div>
+          <span className={styles.overlay_blue}>전문성</span>과 <span className={styles.overlay_orange}>따뜻함</span>으로 당신의 이야기에 귀를 기울이겠습니다.
+        </div>
       </div>
     </div>
   )
