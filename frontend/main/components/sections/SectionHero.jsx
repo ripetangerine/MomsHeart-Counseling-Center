@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState, useMemo } from 'react'
-import styles from './SectionHero.module.css'
+import styles from './css/SectionHero.module.css'
 
 // DB
 const DEFAULT_IMAGES = ['/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg']

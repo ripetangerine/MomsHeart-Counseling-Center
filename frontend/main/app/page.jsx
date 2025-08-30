@@ -1,11 +1,11 @@
 'use client'
-import { SectionMap } from '@/components/sections'
+import { SectionMap } from '@/components/sections/index'
 import { sectionsConfig } from '@/config/sections.jsx'
 
 export default function Page() {
 
-  // section 생성
-  // sectionConfig & section 파일 전체 불러와서 maping
+  // null safety 적용
+
   return (
     <>
       {sectionsConfig.map(({ key, anchor }) => {

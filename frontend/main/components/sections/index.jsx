@@ -11,5 +11,5 @@ export const SectionMap = {
     review: SectionReview,
     loadMap: SectionLoadMap,
     intro: SectionIntro,
-    program: SectionProgram
+    program1: SectionProgram
 };
