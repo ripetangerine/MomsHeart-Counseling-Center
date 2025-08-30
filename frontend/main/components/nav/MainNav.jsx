@@ -13,14 +13,14 @@ export default function MainNav() {
       <nav className="nav">
         <div className="nav_inner">
           {/* 로고 */}
-          <Link href={`${'hero'}`}>
+          <Link href={`#${'hero'}`}>
             <img src="/nav/main_logo.png" alt="상담센터로고/hero" />
           </Link>
           {/* 메뉴 */}
           <div className="menu">
             {navItems.map(({ anchor, label }) => (
               <li key={anchor} className={active === anchor ? 'active' : ''}>
-                <Link href={`${anchor}`}>{label}</Link>
+                <Link href={`#${anchor}`}>{label}</Link>
               </li>
             ))}
           </div>

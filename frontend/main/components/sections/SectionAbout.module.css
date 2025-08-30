@@ -1,0 +1,44 @@
+.about {
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  isolation: isolate;
+}
+.total_content{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.sub_title{
+  color:#919191;
+  font-size: 1rem;
+}
+.main_title{
+  color:#000;
+  font-size: 1.5rem;
+}
+.highlight{
+  background-color: #F28F89;
+  opacity: 60%;
+  height: 1rem;
+  width: 1.5rem;
+}
+.contents{
+  display: flex;
+  flex-direction: column;
+}
+.text{
+  color:#737373;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+/* .images{
+  object-fit: cover;
+} */
+

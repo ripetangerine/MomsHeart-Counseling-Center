@@ -74,7 +74,7 @@ function ImageAttach() {
     <div className={styles.overlay}>
       <img className={styles.overlay_logo} src={Dir} alt="상담센터 사진" />
       <div className={styles.overlay_text}>
-        {/* 원래 DB 처리 */}
+        {/* DB */}
         <div>
           누군가의 <span className={styles.overlay_pink}>'마음'</span>을 가장 깊이 이해하고 싶다는 뜻에서 시작되었습니다
         </div>
