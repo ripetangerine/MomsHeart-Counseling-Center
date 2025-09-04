@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  place-items: center;
   gap: 1rem;
 }
 .title{
@@ -38,42 +39,26 @@
   font-size: 1rem;
   margin-bottom: 0.1rem;
 }
-/* .images{
-  object-fit: cover;
-} */
-
-/* 레이어 위치: 배경과 UI 사이 (필요에 따라 z-index 조절) */
 .panner {
-  position: absolute;
-  left: 0; 
-  right: 0; 
-  bottom: 12%;
-  transform: translateX(-50%);
+  display:flex;
+  flex-direction: row;
+  gap:1rem;
   z-index: 2;
-  pointer-events: none;           /* 클릭 방해 X */
-  display: flex; 
-  place-items: center;
+  pointer-events: none;     
   overflow: visible;
 }
-
-/* 이미지 크기/투명도 조절은 취향대로 */
 .panner img {
-  width: clamp(240px, 30vw, 640px);   /* 반응형 크기 */
-  height: auto;
+  width: clamp(4rem, 5rem, 6rem);   
   opacity: 0.9;
   filter: drop-shadow(0 8px 24px rgba(0,0,0,.18));
   will-change: transform;
-  animation: pan-x var(--pan-dur, 18s) ease-in-out infinite alternate;
-  transform: translate3d(-6%,0,0);    /* 시작점 약간 왼쪽 */
+  animation: panner-x 3s linear normal;
 }
-
-/* 좌↔우 왕복 이동 */
-@keyframes pan-x {
-  from { transform: translate3d(-6%, 0, 0); }
-  to   { transform: translate3d( 6%, 0, 0); }
+@keyframes panner-x {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-
-/* 사용자가 모션 줄이기 설정한 경우 정지 */
+/*예외처리*/
 @media (prefers-reduced-motion: reduce) {
   .panner img { animation: none; }
 }

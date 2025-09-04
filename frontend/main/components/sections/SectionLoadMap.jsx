@@ -45,7 +45,11 @@ function Maps({ lat, lng, level = 3 }) {
         src={`https://dapi.kakao.com/v2/maps/sdk.js?appkey=${appKey}&autoload=false&libraries=services`}
         strategy="afterInteractive"
         onLoad={() => setSdkReady(true)}
-        onError={(e) => console.error("Kakao SDK 로드 실패", e)}
+        await onError={(e) =>{
+          return(
+            <div style={{background:"green"}}>지도가안됍니다왜지감자</div>
+          )}
+        }
       />
       <div ref={mapRef} style={{ width: "100%", height: 400 }} />
     </>

@@ -1,0 +1,72 @@
+.review{
+  pointer-events: none;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  isolation: isolate;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.title{
+  display: flex; /**/
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.title_top{
+  color:#000;
+  font-size: 3rem; /**/
+}
+.title_content{
+  font-size: 1rem; /**/
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: ;
+}
+/*****/
+.card_top{
+  display: flex;
+  flex-direction: row;
+  gap: 1px; 
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+.card_title{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.card_name{
+  font-size: 1.5rem;
+}
+.card_name_content{
+  font-size: 1rem;
+}
+/**/
+.stars{
+  display:flex;
+  flex-direction: row;
+  gap: 2px;
+  object-fit: cover;
+}
+
+/**/
+/* .container{
+
+} */
+.content{
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+/**/
+/**/

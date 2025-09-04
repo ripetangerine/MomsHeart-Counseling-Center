@@ -19,6 +19,7 @@ export default function SectionAbout() {
             <p className={styles.text}>엄마의 마음으로 당신의 성장에 함께 하겠습니다.</p>
             
             <div className={styles.panner}>
+              {/* 사진 겹침 문제 해결띠; */}
               <img src="/about/김신실.png" alt="이미지사진" />
               <img src="/about/김신실.png" alt="이미지사진" />
               <img src="/about/김신실.png" alt="이미지사진" />
