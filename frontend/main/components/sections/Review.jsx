@@ -1,7 +1,17 @@
 'use client'
+import {useRef} from "react";
 import styles from "./css/Review.module.css"
 
-export default function SectionReview(){
+export default function Review(){
+  const trackRef = useRef(null);
+
+  const scrollByOneView = (dir) =>{
+    const el = trackRef.current;
+    if(!el) return;
+    const amount = el.clieneWidth;
+    el.scrollBy({left:dir*amount, behavior:"smooth"});
+  }
+
   // DB
   return(
       <section id="review" className={`section ${styles.review}`}>
@@ -10,12 +20,30 @@ export default function SectionReview(){
             <div className={styles.title_top}>상담후기</div>
             <div className={styles.title_content}>엄마심리상담센터에서 들려오는 생생한 후기</div>
           </div>
-          <div className={styles.cards}>
-            {[1,2,3].map((_, i)=>{
-              return(
-                <ReviewCard key={i} name={"홍길동"} date={"7.10"} visited={1} star={5}/>
-              )
-            })}
+
+          <div className={styles.carousel}>
+            <button
+              className={`${styles.navBtn} ${styles.prev}`}
+              aria-label="이전후기"
+              onClick={() => scrollByOneView(-1)}
+            >{"<"}</button>
+
+            <div className={styles.viewport}>
+              <div className={styles.track} ref={trackRef}>
+                {[1,2,3].map((_, i)=>{
+                  return(
+                    <ReviewCard key={i} name={"홍길동"} date={"7.10"} visited={1} star={5}/>
+                  )
+                })}
+              </div>
+            </div>
+
+            <button
+              className={`${styles.navBtn} ${styles.prev}`}
+              aria-label="이전후기"
+              onClick={() => scrollByOneView(-1)}
+            >{">"}</button>
+            <button id="more" onClick={null}>후기 더보기</button>
           </div>
         </div>
       </section>
@@ -26,7 +54,7 @@ function ReviewCard({name, date, visited, star}){
   return(
     <div className={styles.card}>
       <div className={styles.card_top}>
-        <img src="about/profile.png" alt="프로필사진" className={styles.profile}/>
+        <img src="about/profile.png" alt="프로필" className={styles.profile}/>
         <div className={styles.card_title}>
           <div className={styles.card_name}>{name}</div>
           <div className={styles.card_name_content}>{date} · {visited}번째 방문</div>
@@ -36,7 +64,14 @@ function ReviewCard({name, date, visited, star}){
       <div className={styles.stars}>
         {
           [1,2,3,4,5].map((_, i)=>{
-            return(<img src="/about/star.png" alt="별이안나와요" key={i}/>);
+            return(
+            <img 
+              src="/about/star.png" 
+              alt="별"
+              key={i}
+              className={styles.star}
+              />
+            );
           })
         }
       </div>

@@ -1,5 +1,5 @@
 'use client'
-export default function SectionIntro(){
+export default function Intro(){
     // 전문가 소개
     return(
         <section id="intro" className="section" style={{ background: "#f7f7f7" }}>

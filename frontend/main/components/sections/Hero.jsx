@@ -5,7 +5,7 @@ import styles from './css/Hero.module.css'
 // DB
 const DEFAULT_IMAGES = ['/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg']
 
-export default function SectionHero({
+export default function Hero({
   id = 'hero',
   images = DEFAULT_IMAGES,
   intervalMs = 5000,

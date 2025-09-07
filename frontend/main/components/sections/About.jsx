@@ -1,7 +1,7 @@
 'use client'
 import styles from "./css/About.module.css"
 
-export default function SectionAbout() {
+export default function About() {
   // DB (내용이 바뀔 가능성)
     return (
       <section id="about" className={`section ${styles.about}`} style={{ background: "#f7f7f7" }}>
