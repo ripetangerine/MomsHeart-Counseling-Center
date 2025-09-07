@@ -1,20 +1,23 @@
 .review{
-  pointer-events: none;
   min-height: 100vh;
-  padding: 0;
+  padding: 64px 0;
   position: relative;
   isolation: isolate;
+  background: #f7f1e6;
 }
 .container{
+  width: min(1200px, 92%);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   place-items: center;
 }
 .title{
+  text-align: center;
   display: flex; /**/
   flex-direction: column;
-  text-align: center;
-  gap: 1rem;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
 }
 .title_top{
   color:#000;
@@ -24,21 +27,46 @@
   font-size: 1rem; /**/
 }
 .cards{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding: 30px 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+/**/
+/* 반응형 */
+@media (max-width: 1100px){
+  .cards{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 820px){
+  .cards{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+  .cards{ grid-template-columns: 1fr; }
 }
 /*****/
-.card_top{
-  display: flex;
-  flex-direction: row;
-  gap: 1px; 
-}
+
 .card{
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.06);
+  padding:20px;
   display: flex;
   flex-direction: column;
-  min-width: 200px;
+  gap:12px;
+  min-width: 220px;
+}
+.card_top{
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+}
+.profile{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e5e7eb;
+  flex: 0 0 52px;
 }
 .card_title{
   display: flex;
@@ -54,19 +82,23 @@
 /**/
 .stars{
   display:flex;
-  flex-direction: row;
-  gap: 2px;
-  object-fit: cover;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+.star{
+  width: 1rem;
+  height: 1rem;
+  object-fit: contain;
 }
 
-/**/
-/* .container{
-
-} */
 .content{
   flex-wrap: wrap;
   overflow: visible;
+  color:#374151;
+  line-height: 1.5;
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-
-/**/
-/**/
