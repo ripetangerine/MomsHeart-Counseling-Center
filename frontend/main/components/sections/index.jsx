@@ -2,7 +2,7 @@ import SectionHero from "./Hero";
 import SectionAbout from "./About";
 import SectionReview from "./Review";
 import SectionLoadMap from "./LoadMap";
-import SectionIntro from "./Intro";
+import SectionIntro from "./Expert";
 import SectionProgram from "./Program";
 import SectionPartners from "./Partners";
 

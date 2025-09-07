@@ -1,0 +1,25 @@
+.partners{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  place-content: center;
+  text-align: center;
+}
+.title1{
+  font-size:2rem;
+  font-weight: bold;
+}
+.title2{
+  font-size:1rem;
+}
+.items{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, auto));
+  grid-template-rows: repeat(2, minmax(100px, auto));
+  gap:20px;
+}
+.bottom-content{
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
