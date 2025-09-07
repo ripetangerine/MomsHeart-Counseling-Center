@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
-import styles from "./css/SectionLoadMap.module.css";
+import styles from "./css/LoadMap.module.css";
 
 export default function SectionLoadMap() {
 

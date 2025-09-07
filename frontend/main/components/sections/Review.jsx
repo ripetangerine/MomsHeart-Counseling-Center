@@ -1,5 +1,5 @@
 'use client'
-import styles from "./css/SectionReview.module.css"
+import styles from "./css/Review.module.css"
 
 export default function SectionReview(){
   // DB

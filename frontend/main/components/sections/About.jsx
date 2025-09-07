@@ -1,5 +1,5 @@
 'use client'
-import styles from "./css/SectionAbout.module.css"
+import styles from "./css/About.module.css"
 
 export default function SectionAbout() {
   // DB (내용이 바뀔 가능성)

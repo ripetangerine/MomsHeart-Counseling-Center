@@ -1,9 +1,9 @@
-import SectionHero from "./SectionHero";
-import SectionAbout from "./SectionAbout";
-import SectionReview from "./SectionReview";
-import SectionLoadMap from "./SectionLoadMap";
-import SectionIntro from "./SectionIntro";
-import SectionProgram from "./SectionProgram";
+import SectionHero from "./Hero";
+import SectionAbout from "./About";
+import SectionReview from "./Review";
+import SectionLoadMap from "./LoadMap";
+import SectionIntro from "./Intro";
+import SectionProgram from "./Program";
 
 export const SectionMap = {
     hero: SectionHero,
