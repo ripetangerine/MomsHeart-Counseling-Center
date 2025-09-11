@@ -3,7 +3,7 @@ import MainNav from '../components/nav/MainNav'
 import Head from 'next/head'
 
 export const metadata = {
-  metadataBase: new URL("https:"/"/momshearts.co.kr"), // 기본 도메인
+  metadataBase: new URL("https://momshearts.co.kr"), // 기본 도메인
   title: {
     default: "엄마마음심리상담센터",
     template: "%s | 엄마마음심리상담센터 Momshearts",
@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "엄마마음심리상담센터",
     description: "",
-    url: "www.momshearts.co.kr",
+    url: "https://momshearts.co.kr",
     siteName: "엄마마음심리상담센터",
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata = {
     images: ["/non/represent.jpg"],
   },
   alternates: {
-    canonical: "www.momshearts.co.kr",
+    canonical: "https://momshearts.co.kr",
   },
   robots: {
     index: true,
