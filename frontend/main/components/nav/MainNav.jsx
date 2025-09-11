@@ -66,7 +66,7 @@ export default function MainNav() {
                   </li>
                 ))}
               </ul>
-              <button className="book_btn wide" onClick={() => { close() }}>예약 및 문의</button>
+              <button className="book_btn wide" onClick={() => {window.location.href = 'http://pf.kakao.com/_AIuEn';}}>예약 및 문의</button>
             </div>
           </div>
         )}

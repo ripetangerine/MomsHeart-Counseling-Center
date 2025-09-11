@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, useMemo } from 'react'
 import styles from './css/Hero.module.css'
 
 // DB
-const DEFAULT_IMAGES = ['/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg']
+const DEFAULT_IMAGES = ['/hero/1.jpg', '/hero/2.jpg', '/,hero/3.jpg', '/hero/4.jpg']
 
 export default function Hero({
   id = 'hero',
@@ -75,10 +75,10 @@ function ImageAttach() {
       <img className={styles.overlay_logo} src={Dir} alt="상담센터 사진" />
       <div className={styles.overlay_text}>
         {/* DB */}
-        <div>
+        <div className={styles.overlay_inner_text}>
           누군가의 <span className={styles.overlay_pink}>'마음'</span>을 가장 깊이 이해하고 싶다는 뜻에서 시작되었습니다
         </div>
-        <div>
+        <div className={styles.overlay_inner_text}>
           <span className={styles.overlay_blue}>전문성</span>과 <span className={styles.overlay_orange}>따뜻함</span>으로 당신의 이야기에 귀를 기울이겠습니다.
         </div>
       </div>
