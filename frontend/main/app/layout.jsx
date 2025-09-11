@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "엄마마음심리상담센터",
     description: "",
-    url: "https://momshearts.co.kr",
+    url: "www.momshearts.co.kr",
     siteName: "엄마마음심리상담센터",
     images: [
       {
@@ -28,12 +28,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mom's Hearts",
+    title: "엄마마음심리상담센터",
     description: "엄마들의 마음을 위한 상담 센터 소개 페이지",
     images: ["/non/represent.jpg"],
   },
   alternates: {
-    canonical: "https://momshearts.co.kr",
+    canonical: "www.momshearts.co.kr",
   },
   robots: {
     index: true,
