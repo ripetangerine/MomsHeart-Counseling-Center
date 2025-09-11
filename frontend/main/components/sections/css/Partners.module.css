@@ -6,20 +6,26 @@
   text-align: center;
 }
 .title1{
-  font-size:2rem;
+  font-size:1.5rem;
   font-weight: bold;
+  margin-bottom: .5rem;
 }
 .title2{
   font-size:1rem;
+  margin-bottom: 1.5rem;
 }
 .items{
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, auto));
   grid-template-rows: repeat(2, minmax(100px, auto));
   gap:20px;
+  margin-bottom: 1rem;
 }
 .bottom_content{
   display: flex;
   flex-direction: column;
   font-size: 1rem;
+  gap:.1rem;
+  margin-top: 1rem;
+  color:#919191;
 }

@@ -9,6 +9,19 @@
   margin-right: auto;
 }
 
+.title{
+  font-size:1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+.sub_title{
+  font-size:1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color:#919191;
+}
+
 @media (max-width: 768px) {
   .items {
     grid-template-columns: 1fr;
@@ -42,7 +55,7 @@
   }
   .modal_img {
     width: 64px;
-    height: 64px;
+    height: 100px;
     border-radius: 12px;
   }
   .modal_title {
@@ -66,6 +79,7 @@
   align-items: flex-start;
   background: #fff;
   border-radius: 20px;
+  border:none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   padding: 20px;
   gap: 20px;
@@ -79,7 +93,7 @@
   .card_container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     gap: 16px;
     padding: 16px;
   }
@@ -140,6 +154,7 @@
   font-weight: 600;
   margin-bottom: 4px;
   color: #222;
+  text-align: left;
 }
 .card_bio {
   font-size: 0.9rem;
@@ -238,18 +253,18 @@
   background: #e5e7eb;
 }
 .modal_section {
-  margin-top: 16px;
+  margin: 1rem 0;
 }
 .section_title {
   font-size: 1rem;
   font-weight: 600;
   color: #111827;
-  margin-bottom: 8px;
 }
 .section_list {
   padding-left: 18px;
   line-height: 1.6;
   color: #444;
+  margin : 0;
 }
 .section_tags {
   display: flex;

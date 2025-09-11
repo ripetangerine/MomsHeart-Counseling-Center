@@ -70,6 +70,8 @@ html { scroll-padding-top: var(--nav-h); }
   font-weight: 500;
 }
 
+
+
 /* CTA */
 .cta {
   display: flex;

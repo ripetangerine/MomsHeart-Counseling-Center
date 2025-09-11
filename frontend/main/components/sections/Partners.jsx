@@ -19,7 +19,7 @@ export default function Partners(){
         <img src="/partners/partner7.png" className={styles.item_img} alt="협력기관" />
         <img src="/partners/partner8.png" className={styles.item_img} alt="협력기관" />
       </div>
-      <div className={styles.bottomcontent}>
+      <div className={styles.bottom_content}>
         <div>저희 센터는 지역사회에서 신뢰받는 전문 심리상담기관으로</div>
         <div>다양한 공공·민간 기관과 업무협약(MOU)을 체결하여 협력 네트워크를 구축하고 있습니다.</div>
       </div>

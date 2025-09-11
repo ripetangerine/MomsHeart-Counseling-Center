@@ -17,12 +17,13 @@
   gap: 5px;
 }
 .sub_title{
-  color:#919191;
+  color:#737373;
   font-size: 1rem;
 }
 .main_title{
   color:#000;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 .marker{
   position: relative;
@@ -55,11 +56,12 @@
 .contents{
   display: flex;
   flex-direction: column;
+  gap:5px;
 }
 .text{
-  color:#737373;
+  color:#919191;
   font-size: 1rem;
-  margin-bottom: 0.1rem;
+  margin: 5px 0;
 }
 .panner {
   display:flex;
