@@ -1,3 +1,12 @@
+:root{
+  --text-color:#000;
+  --subText-color:#737373;
+  --thirdText-color:#919191;
+  --nav-h: 56px;
+}
+html, body { overflow-x: hidden; }       /* 임시 봉합용 — 원인을 가리기도 함 */
+*, *::before, *::after { box-sizing: border-box; }
+img, video, canvas, svg { max-width: 100%; height: auto; display: block; }
 * {
   box-sizing: border-box;
 }
@@ -9,15 +18,12 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
 } /* 앵커 이동 부드럽게 */
-:root {
-  --nav-h: 56px;
-} /* 네비 높이 통일 관리 */
-
 body {
   overflow-y: auto;
   scroll-snap-type: y mandatory; /* 한 섹션씩 스냅 */
   overscroll-behavior: contain; /* 모바일 튕김 최소화(선택) */
   font-family: 'NanumSquareNeo', sans-serif;
+  width: 100%;
 }
 
 .menu {

@@ -18,7 +18,7 @@
   grid-template-rows: repeat(2, minmax(100px, auto));
   gap:20px;
 }
-.bottom-content{
+.bottom_content{
   display: flex;
   flex-direction: column;
   font-size: 1rem;

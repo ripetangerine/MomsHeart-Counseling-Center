@@ -5,7 +5,7 @@ import Head from 'next/head'
 export const metadata = {
   title: '',
   description: '원페이지 스크롤 테스트중',
-}
+} // seo 랑 협의하세여여
 
 export default function RootLayout({children}) {
   return (

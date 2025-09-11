@@ -4,7 +4,6 @@ import { sectionsConfig } from '@/config/sections.jsx'
 
 export default function Page() {
 
-  // null safety 적용
 
   return (
     <>
