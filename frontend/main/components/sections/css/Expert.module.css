@@ -1,8 +1,63 @@
 .items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 24px;
   margin-top: 40px;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .items {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 16px;
+  }
+}
+  
+@media (max-width: 480px) {
+  .items {
+    padding: 0 12px;
+    gap: 12px;
+  }
+}
+
+/* 모바일 모달 최적화 */
+@media (max-width: 480px) {
+  .modal_overlay {
+    padding-top: 56px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .modal {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+  }
+  .modal_header {
+    align-items: flex-start;
+  }
+  .modal_img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+  }
+  .modal_title {
+    font-size: 1.1rem;
+  }
+  .modal_close {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+  .section_title {
+    font-size: 0.95rem;
+  }
+  .section_list {
+    padding-left: 16px;
+  }
 }
 
 .card_container {
@@ -15,6 +70,19 @@
   padding: 20px;
   gap: 20px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .card_container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 16px;
+  }
 }
 
 .card_clickable {
@@ -38,12 +106,34 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 480px) {
+  .card_img {
+    height: 120px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card_name {
+    font-size: 1.05rem;
+  }
+  .card_bio {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .current_record {
+    font-size: 0.8rem;
+  }
+}
+
 .card_content {
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-size: 0.95rem;
   color: var(--text-color, #333);
+  flex: 1;
+  min-width: 0;
 }
 .card_name {
   font-size: 1.2rem;
@@ -56,6 +146,11 @@
   color: #666;
   margin-bottom: 8px;
   line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .card_category {
@@ -78,6 +173,19 @@
   color: #444;
   line-height: 1.5;
   margin-top: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 480px) {
+  .current_record {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
 }
 
 .modal_overlay {
@@ -88,15 +196,17 @@
   align-items: center;
   justify-content: center;
   z-index: 50;
+  padding-top: 72px; /* nav와 시각적 간격 확보 */
 }
 .modal {
-  width: min(720px, 92vw);
+  width: min(720px, 92vw);  
   background: #fff;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   max-height: 85vh;
   overflow: auto;
+  text-align: left; /* 모달 내 텍스트 기본 좌측 정렬 */
 }
 .modal_header {
   display: flex;
@@ -107,4 +217,50 @@
 .modal_img {
   width: 84px;
   height: 84px;
+}
+/* 추가: 모달 타이틀, 닫기 버튼, 콘텐츠 섹션 */
+.modal_title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  text-align: left; /* 제목 좌측 정렬 보장 */
+}
+.modal_close {
+  margin-left: auto;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: #333;
+  cursor: pointer;
+}
+.modal_close:hover {
+  background: #e5e7eb;
+}
+.modal_section {
+  margin-top: 16px;
+}
+.section_title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+.section_list {
+  padding-left: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+.section_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  background: #f0f0f5;
+  color: #444;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
 }

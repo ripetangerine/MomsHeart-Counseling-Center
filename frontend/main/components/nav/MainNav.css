@@ -21,6 +21,9 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+/* 고정 네비로 가려지는 것 보정: 전역 스크롤 마진 */
+html { scroll-padding-top: var(--nav-h); }
+
 /* nav_inner는 가로 정렬과 최대폭만 담당 */
 .nav_inner {
   display: flex;
@@ -78,4 +81,58 @@
   border-radius: 999px;
   cursor: pointer;
   background-color: #ffefb9;
+}
+
+/* 햄버거 버튼 (모바일 전용) */
+.hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #111;
+}
+
+/* 모바일 메뉴 패널 */
+.mobile_menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 999;
+  display: none;
+}
+.mobile_menu_inner {
+  position: absolute;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 16px;
+}
+.mobile_menu_inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  gap: 12px;
+}
+.book_btn.wide {
+  width: 100%;
+}
+
+/* 반응형 분기 */
+@media (max-width: 768px) {
+  .menu, .cta { display: none; }
+  .hamburger { display: inline-flex; }
+  .mobile_menu { display: block; }
 }

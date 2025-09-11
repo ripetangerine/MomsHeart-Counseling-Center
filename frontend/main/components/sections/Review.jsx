@@ -30,7 +30,7 @@ export default function Review(){
 
             <div className={styles.viewport}>
               <div className={styles.track} ref={trackRef}>
-                {[1,2,3].map((_, i)=>{
+                {Array.from({length:3}, (i)=>i+1).map((_, i)=>{
                   return(
                     <ReviewCard key={i} name={"홍길동"} date={"7.10"} visited={1} star={5}/>
                   )

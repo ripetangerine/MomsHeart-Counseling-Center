@@ -10,14 +10,14 @@ export default function Partners(){
         <div className={styles.title2}>엄마상담심리센터는 이런 협력 네트워크를 구축하고 있어요</div>
       </div>
       <div className={styles.items}>
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
-        <img src="/about/Frame427.png" className={styles.coopertive_img} alt="협력기관" />
+        <img src="/partners/partner1.png" className={styles.item_img} alt="협력기관" />
+        <img src="/partners/partner2.png" className={styles.item_img} alt="협력기관" />
+        <img src="/partners/partner3.png" className={styles.item_img} alt="협력기관" />
+        <img src="/partners/partner4.png" className={styles.item_img} alt="협력기관" />
+        <img src="/partners/partner5.png" className={styles.item_img} alt="협력기관" />
+        <img src="/partners/partner6.png" className={styles.item_img} alt="협력기관" />
+        <img src="/partners/partner7.png" className={styles.item_img} alt="협력기관" />
+        <img src="/partners/partner8.png" className={styles.item_img} alt="협력기관" />
       </div>
       <div className={styles.bottomcontent}>
         <div>저희 센터는 지역사회에서 신뢰받는 전문 심리상담기관으로</div>

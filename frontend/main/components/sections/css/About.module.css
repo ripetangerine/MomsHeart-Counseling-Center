@@ -24,11 +24,33 @@
   color:#000;
   font-size: 1.5rem;
 }
-.highlight{
-  background-color: #F28F89;
-  opacity: 60%;
-  height: 1rem;
-  width: 1.5rem;
+.marker{
+  position: relative;
+  display: inline-block;
+  z-index: 0; /* 텍스트 레이어 기준 */
+  isolation: isolate; /* 자식의 음수 z-index가 부모 바깥으로 빠지지 않도록 */
+  padding: 0 .15em;
+}
+.marker:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.05em;
+  height: 0.55em;
+  background: #F7bcb8;
+  opacity: 0.9;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: 100% 50%; /* 오른쪽에서 시작 */
+  animation: marker-swipe 1.2s ease forwards;
+  z-index: -1; /* 텍스트 뒤로 배치 */
+  pointer-events: none;
+}
+
+@keyframes marker-swipe {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 .contents{
   display: flex;
