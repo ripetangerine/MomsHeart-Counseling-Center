@@ -13,7 +13,6 @@ export default function MainNav() {
   const toggle = useCallback(() => setOpen((v) => !v), [])
   const close = useCallback(() => setOpen(false), [])
 
-  // 네비가 열려 있을 때 뒤 스크롤 방지 (모바일 UX)
   useEffect(() => {
     if (!open) return
     const original = document.body.style.overflow

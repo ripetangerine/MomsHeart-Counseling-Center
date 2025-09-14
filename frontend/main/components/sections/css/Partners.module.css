@@ -37,7 +37,7 @@
 }
 
 .item_img {
-  height: 80px;
+  height: 4rem;
   width: auto;
   object-fit: contain;
   opacity: 0.8;

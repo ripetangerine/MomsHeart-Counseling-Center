@@ -66,11 +66,14 @@ export default function Expert(){
               <button className={styles.modal_close} onClick={closeModal}>닫기</button>
             </div>
 
+            <div>
+              
+            </div>
             {/* 소개 */}
             {selected.bio && (
               <div className={styles.modal_section}>
                 <div className={styles.section_title}>소개</div>
-                <p style={{color:'#555', lineHeight:1.7}}>{selected.bio}</p>
+                <p style={{color:'#555'}}>{selected.bio}</p>
               </div>
             )}
 
