@@ -55,7 +55,7 @@ export default function MainNav() {
           </button>
         </div>
 
-        {/* 모바일 드롭다운 메뉴 */}
+        {/* 모바일/태블릿 드롭다운 메뉴 */}
         {open && (
           <div className="mobile_menu" role="dialog" aria-modal="true" onClick={close}>
             <div className="mobile_menu_inner" onClick={(e) => e.stopPropagation()}>
@@ -66,7 +66,7 @@ export default function MainNav() {
                   </li>
                 ))}
               </ul>
-              <button className="book_btn wide" onClick={() => {window.location.href = 'http://pf.kakao.com/_AIuEn';}}>예약 및 문의</button>
+              <button className="book_btn wide" onClick={() => {window.location.href = 'http://pf.kakao.com/_AIuEn'; close();}}>예약 및 문의</button>
             </div>
           </div>
         )}

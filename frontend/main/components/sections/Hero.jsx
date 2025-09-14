@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, useMemo } from 'react'
 import styles from './css/Hero.module.css'
 
 // DB
-const DEFAULT_IMAGES = ['/hero/1.jpg', '/hero/2.jpg', '/,hero/3.jpg', '/hero/4.jpg']
+const DEFAULT_IMAGES = ['/hero/1.jpg', '/hero/2.jpg', '/hero/3.jpg', '/hero/4.jpg']
 
 export default function Hero({
   id = 'hero',
@@ -33,7 +33,7 @@ export default function Hero({
       aria-roledescription="carousel"
       aria-live="polite"
     >
-      <div className={styles.stage}>
+      <div className={`${styles.stage} ${styles.veil}`}>
         {images.map((src, i) => (
           <figure
             key={src}

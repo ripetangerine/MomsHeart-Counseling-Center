@@ -3,6 +3,9 @@
   padding: 0;
   position: relative;
   isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .total_content{
   display: flex;
@@ -10,6 +13,8 @@
   text-align: center;
   place-items: center;
   gap: 1rem;
+  max-width: 800px;
+  padding: 3rem 2rem;
 }
 .title{
   display: flex;
@@ -32,7 +37,7 @@
   isolation: isolate; /* 자식의 음수 z-index가 부모 바깥으로 빠지지 않도록 */
   padding: 0 .15em;
 }
-.marker:before{
+.marker::after{
   content: "";
   position: absolute;
   left: 0;
@@ -57,12 +62,14 @@
   display: flex;
   flex-direction: column;
   gap:5px;
+  flex-wrap: nowrap;
 }
 .text{
   color:#919191;
   font-size: 1rem;
   margin: 5px 0;
 }
+/* 사진 Marquee 효과 (지금은 없음) */
 .panner {
   display:flex;
   flex-direction: row;
@@ -82,6 +89,86 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* 반응형 폰트 크기 조정 */
+/* 태블릿 (768px ~ 1024px) */
+@media (max-width: 1024px) {
+  .sub_title {
+    font-size: 0.9rem;
+  }
+  .main_title {
+    font-size: 1.3rem;
+  }
+  .text {
+    font-size: 0.95rem;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+  .about {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+  
+  .total_content {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .title {
+    gap: 8px;
+  }
+  
+  .sub_title {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .main_title {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contents {
+    gap: 8px;
+  }
+  
+  .text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 8px 0;
+  }
+  
+  /* 모바일에서 마커 애니메이션 조정 */
+  .marker:before {
+    height: 0.5em;
+    bottom: 0.1em;
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .total_content {
+    padding: 1.5rem 0.8rem;
+  }
+  
+  .sub_title {
+    font-size: 0.8rem;
+  }
+  
+  .main_title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
 /*예외처리*/
 @media (prefers-reduced-motion: reduce) {
   .panner img { animation: none; }

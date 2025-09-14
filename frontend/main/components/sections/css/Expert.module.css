@@ -28,6 +28,18 @@
     padding: 0 16px;
     gap: 16px;
   }
+  
+  .current_record_section {
+    padding-top: 10px;
+  }
+  
+  .current_record_title {
+    font-size: 0.85rem;
+  }
+  
+  .current_record_item {
+    font-size: 0.75rem;
+  }
 }
   
 @media (max-width: 480px) {
@@ -55,7 +67,7 @@
   }
   .modal_img {
     width: 64px;
-    height: 100px;
+    height: auto;
     border-radius: 12px;
   }
   .modal_title {
@@ -183,23 +195,73 @@
   white-space: nowrap;
 }
 
+.current_record_section {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.current_record_title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.current_record_title::before {
+  content: "💼";
+  margin-right: 6px;
+  font-size: 0.8rem;
+}
+
 .current_record {
   font-size: 0.85rem;
-  color: #444;
-  line-height: 1.5;
-  margin-top: auto;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
+  color: #555;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.current_record_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.bullet {
+  color: #e5c66b;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 1px;
 }
 
 @media (max-width: 480px) {
+  .current_record_section {
+    padding-top: 10px;
+  }
+  
+  .current_record_title {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+  
   .current_record {
-    font-size: 0.8rem;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    font-size: 0.75rem;
+    gap: 3px;
+  }
+  
+  .current_record_item {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .bullet {
+    font-size: 0.7rem;
   }
 }
 
@@ -231,7 +293,9 @@
 }
 .modal_img {
   width: 84px;
-  height: 84px;
+  height: auto;
+  border-radius: 20px;
+  border:none;
 }
 /* 추가: 모달 타이틀, 닫기 버튼, 콘텐츠 섹션 */
 .modal_title {

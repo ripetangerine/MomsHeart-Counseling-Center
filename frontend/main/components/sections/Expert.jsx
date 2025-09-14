@@ -180,7 +180,6 @@ function Card({ expert, onOpen }) {
   const CategoryRender = ({ item }) => (
     <div className={styles.categorys}>{item}</div>
   );
-
   return (
     <button
       type="button"
@@ -203,10 +202,16 @@ function Card({ expert, onOpen }) {
           ))}
         </div>
 
-        <div className={styles.current_record}>
-          {(expert.current_record ?? []).slice(0, 3).map((line, i) => (
-            <div key={i}>{line}</div>
-          ))}
+        <div className={styles.current_record_section}>
+          <div className={styles.current_record_title}>이력</div>
+          <div className={styles.current_record}>
+            {(expert.current_record ?? []).slice(0, 3).map((line, i) => (
+              <div key={i} className={styles.current_record_item}>
+                <span className={styles.bullet}>•</span>
+                {line}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </button>
