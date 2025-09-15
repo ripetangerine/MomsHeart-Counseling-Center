@@ -13,7 +13,6 @@ export default function MainNav() {
   const toggle = useCallback(() => setOpen((v) => !v), [])
   const close = useCallback(() => setOpen(false), [])
 
-  // 네비가 열려 있을 때 뒤 스크롤 방지 (모바일 UX)
   useEffect(() => {
     if (!open) return
     const original = document.body.style.overflow
@@ -55,7 +54,7 @@ export default function MainNav() {
           </button>
         </div>
 
-        {/* 모바일 드롭다운 메뉴 */}
+        {/* 모바일/태블릿 드롭다운 메뉴 */}
         {open && (
           <div className="mobile_menu" role="dialog" aria-modal="true" onClick={close}>
             <div className="mobile_menu_inner" onClick={(e) => e.stopPropagation()}>
@@ -66,7 +65,7 @@ export default function MainNav() {
                   </li>
                 ))}
               </ul>
-              <button className="book_btn wide" onClick={() => {window.location.href = 'http://pf.kakao.com/_AIuEn';}}>예약 및 문의</button>
+              <button className="book_btn wide" onClick={() => {window.location.href = 'http://pf.kakao.com/_AIuEn'; close();}}>예약 및 문의</button>
             </div>
           </div>
         )}

@@ -33,7 +33,7 @@ export default function Hero({
       aria-roledescription="carousel"
       aria-live="polite"
     >
-      <div className={styles.stage}>
+      <div className={`${styles.stage} ${styles.veil}`}>
         {images.map((src, i) => (
           <figure
             key={src}

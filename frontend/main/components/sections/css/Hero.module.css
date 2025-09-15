@@ -39,8 +39,8 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.18),
-    rgba(0, 0, 0, 0.28)
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6)
   );
   pointer-events: none;
 }
@@ -83,7 +83,7 @@
   position: absolute;
   inset: 0 100% 0 0;
   background: #fff;
-  animation: fill var(--dur, 5000ms) linear forwards;
+  animation: fill var(--dur, 3500ms) linear forwards;
 }
 @keyframes fill {
   from {
