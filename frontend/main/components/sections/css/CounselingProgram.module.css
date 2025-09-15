@@ -1,0 +1,122 @@
+.section {
+  background: #fff;
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.tabList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.tab {
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background: #f5f5f5;
+  color: #000;
+  transition: background 0.2s;
+}
+.tab:hover {
+  background: #e5e5e5;
+}
+.tabActive {
+  background: #000;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.cardQuote {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: rgba(0,0,0,0.6);
+}
+
+.moreBtn {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0.5rem;
+  background: #f9f9f9;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.recommended {
+  margin-top: 1.25rem;
+}
+.subTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: #f5f5f5;
+}
+
+.process {
+  margin-top: 1.25rem;
+}
+.text {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.75);
+  white-space: pre-line;
+}
+
+.pricingBox {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #fff0f0;
+}

@@ -5,7 +5,7 @@ import LoadMap from "./LoadMap";
 import Intro from "./Expert";
 import Program from "./Program";
 import Partners from "./Partners";
-import CounselProgram from "./CounselProgram";
+import CounselingaProgram from "./CounselingProgram";
 
 export const SectionMap = {
     hero: Hero,
@@ -14,5 +14,6 @@ export const SectionMap = {
     partners: Partners,
     // loadMap: LoadMap,
     expert: Intro,
-    // counselprogram: CounselProgram,
+    counselingprogram: CounselingaProgram,
+    //
 };
