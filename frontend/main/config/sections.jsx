@@ -5,7 +5,7 @@ export const sectionsConfig = [
   // { key: 'review', anchor:'review', label:'후기', navFlag: false},
   // { key: 'loadMap', anchor:'loadMap', label:'오시는길', navFlag: false},
   { key: 'expert', anchor: 'expert', label: '전문가 소개', navFlag: true },
-  { key: 'counselprogram', anchor: 'counselprogram', label: '상담 프로그램', navFlag: true,},
+  { key: 'counselingprogram', anchor: 'counselingprogram', label: '상담 프로그램', navFlag: true,},
   { key: 'program2', anchor: 'program2', label: '검사 프로그램', navFlag: true,},
   // { key: 'program3', anchor: 'program3', label: '상담 교육', navFlag: true,},
 ]
