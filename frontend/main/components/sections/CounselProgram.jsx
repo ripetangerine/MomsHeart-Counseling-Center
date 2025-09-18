@@ -4,12 +4,12 @@ export default function CounselProgram(){
   return(
       <section className="section" ClassName={styles.program}>
         <div ClassName={styles.buttons}>
-          <button className={`${styles.button_item} ${styles.button_01}`}onClick="location.href=''" value={"성인상담"} />
-          <button className={`${styles.button_item} ${styles.button_01}`}onClick="location.href=''" value={"성인상담"} />
-          <button className={`${styles.button_item} ${styles.button_01}`}onClick="location.href=''" value={"성인상담"} />
-          <button className={`${styles.button_item} ${styles.button_01}`}onClick="location.href=''" value={"성인상담"} />
-          <button className={`${styles.button_item} ${styles.button_01}`}onClick="location.href=''" value={"성인상담"} />
-          <button className={`${styles.button_item} ${styles.button_01}`}onClick="location.href=''" value={"성인상담"} />
+          <button className={`${styles.button_item} ${styles.button_01}`} onClick="location.href=''" value={"성인상담"} />
+          <button className={`${styles.button_item} ${styles.button_01}`} onClick="location.href=''" value={"성인상담"} />
+          <button className={`${styles.button_item} ${styles.button_01}`} onClick="location.href=''" value={"성인상담"} />
+          <button className={`${styles.button_item} ${styles.button_01}`} onClick="location.href=''" value={"성인상담"} />
+          <button className={`${styles.button_item} ${styles.button_01}`} onClick="location.href=''" value={"성인상담"} />
+          <button className={`${styles.button_item} ${styles.button_01}`} onClick="location.href=''" value={"성인상담"} />
         </div>
         <div ClassName={`${styles.container}`}>
           <div>
