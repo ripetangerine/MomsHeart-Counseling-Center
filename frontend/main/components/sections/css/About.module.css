@@ -69,7 +69,7 @@
   font-size: 1rem;
   margin: 5px 0;
 }
-/* 사진 Marquee 효과 (지금은 없음) */
+/* 사진 Marquee 효과 (지금은 없음)
 .panner {
   display:flex;
   flex-direction: row;
@@ -84,7 +84,7 @@
   filter: drop-shadow(0 8px 24px rgba(0,0,0,.18));
   will-change: transform;
   animation: panner-x 3s linear normal;
-}
+} */
 @keyframes panner-x {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -167,9 +167,4 @@
     font-size: 0.85rem;
     line-height: 1.5;
   }
-}
-
-/*예외처리*/
-@media (prefers-reduced-motion: reduce) {
-  .panner img { animation: none; }
 }

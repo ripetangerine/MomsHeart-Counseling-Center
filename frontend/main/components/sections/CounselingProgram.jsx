@@ -31,7 +31,7 @@ export default function CounselingPrograms({ title, tabs = [], data = {}, defaul
   const programs = useMemo(() => (active ? data[active] || [] : []), [active, data]);
 
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${styles.program}`}>
       <div className={styles.container}>
         <h2 className={styles.heading}>{title}</h2>
 
